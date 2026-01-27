@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>R. Abida | AI Portfolio</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  background:#020c1b;
+  color:#eaeaea;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(2,12,27,0.9);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 10%;
+  z-index:999;
+  box-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+.navbar .logo{
+  font-size:1.2rem;
+  font-weight:600;
+  color:#00eaff;
+}
+.navbar nav a{
+  color:#eaeaea;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:500;
+}
+.navbar nav a:hover{
+  color:#00eaff;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:150px 10% 100px;
+}
+.hero-left h1{
+  font-size:3rem;
+}
+.hero-left h1 span{
+  color:#00eaff;
+}
+.hero-left p{
+  margin:20px 0;
+}
+.btn{
+  padding:10px 25px;
+  background:#00eaff;
+  color:#020c1b;
+  border-radius:25px;
+  text-decoration:none;
+}
+.btn:hover{
+  background:#00b8cc;
+}
+
+
+/* SECTIONS */
+.section{
+  padding:90px 10%;
+  text-align:center;
+}
+.section h2{
+  font-size:2.6rem;
+  margin-bottom:40px;
+  color:#00eaff;
+}
+
+/* GLASS CARD */
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:30px;
+  max-width:800px;
+  margin:20px auto;
+  box-shadow:0 0 30px rgba(0,234,255,.3);
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.skill-card{
+  background:rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:25px;
+  text-align:left;
+}
+.skill-title{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+.skill-bar{
+  height:10px;
+  background:#0b1f3a;
+  border-radius:10px;
+  overflow:hidden;
+}
+.skill-progress{
+  height:100%;
+  background:linear-gradient(90deg,#00eaff,#00b8cc);
+  width:0;
+  transition:1.5s ease;
+}
+.reveal.active .skill-progress{
+  width:var(--level);
+}
+
+/* PROJECTS */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-content h3 {
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:1s ease;
+}
+
+/* FOOTER */
+footer{
+  background:#010814;
+  padding:20px;
+  text-align:center;
+  color:#aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header class="navbar">
+  <div class="logo">AR</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero reveal">
+  <div class="hero-left">
+    <h1><span>R.Abida</span></h1>
+    <div id="typing"></div>
+    <p>AI & Data Science student passionate about ML & AI.</p>
+<div class="hero-buttons">
+  <a href="#projects" class="btn">Explore Work</a>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</div>
+
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <!-- Left -->
+    <div class="about-box">
+      <h3>Who I Am</h3>
+      <p>Hi, I'm R Abida — a B.Tech student specializing in Artificial Intelligence & Data Science. I am passionate about exploring the realms of Machine Learning, Natural Language Processing, and AI applications to solve real-world problems.</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="about-box">
+      <h3>What I Do</h3>
+      <p>I develop intelligent systems and AI-based solutions, from predictive models to automation tools. My projects focus on applying machine learning techniques, NLP, and data analysis to create impactful, real-world applications that combine efficiency with innovation.</p>
+    </div>
+
+    <!-- Right -->
+    <div class="about-box">
+      <h3>My Objective</h3>
+      <p>My goal is to contribute to the AI and Data Science landscape by building smart, scalable, and innovative solutions. I am committed to continuous learning and staying updated with the latest AI trends and technologies to make meaningful contributions in the field.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.section {
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* space between boxes */
+  flex-wrap: wrap; /* responsive wrap */
+  margin-top: 40px;
+}
+
+.about-box {
+  flex: 1;
+  min-width: 260px;
+
+  /* SAME background for all boxes */
+  background: rgba(2, 12, 27, 0.85);  /* darker glass */
+  backdrop-filter: blur(16px);
+
+  padding: 25px;
+  border-radius: 16px;
+
+  /* separation from background */
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  box-shadow:
+    0 0 25px rgba(0, 234, 255, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+  text-align: left;
+  color: #eaeaea;
+
+  transition: 0.4s ease;
+}
+.about-box h3 {
+  color: #00eaff;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.about-box p {
+  color: #cfd8dc;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-box {
+    text-align: center;
+  }
+}
+</style>
+
+
+<section id="skills" class="section reveal">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <div class="skill-title"><span>Python</span><span>90%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:90%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title"><span>Machine Learning</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title"><span>NLP</span><span>80%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:80%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title"><span>SQL / MySQL</span><span>75%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:75%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title"><span>HTML & CSS</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title"><span>Streamlit</span><span>70%</span></div>
+      <div class="skill-bar"><div class="skill-progress" style="--level:70%"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <!-- Real-Time Fake Job Detection -->
+    <div class="project-card">
+      <img src="fake-job-detection.png" alt="Real-Time Fake Job Detection">
+      <div class="project-content">
+        <h3>Real-Time Fake Job Detection System</h3>
+        <p>
+          Developed an AI-based system to detect fraudulent job postings in real-time.
+          <br><strong>Key Features:</strong> Real-time scraping, fraud detection using NLP & Random Forest classifier.
+          <br><strong>Technologies:</strong> Python, scikit-learn, NLTK, Streamlit, RemoteOK API, SMOTE.
+          <br><strong>Results:</strong> Accuracy ~98%, Precision ~99%, F1-Score ~80%.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cloud-Based File Storage -->
+    <div class="project-card">
+      <img src="cloud-storage.png" alt="Cloud-Based File Storage">
+      <div class="project-content">
+        <h3>Cloud-Based File Storage & Sharing System</h3>
+        <p>
+          Designed a secure cloud storage system allowing users to upload, store, and download files online.
+          <br><strong>Key Features:</strong> Secure login, file upload/download, interactive dashboard.
+          <br><strong>Technologies:</strong> HTML, CSS, JavaScript, Firebase Authentication, Firebase Cloud Storage.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: rabida900@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/r-abida</p>
+  </div>
+</section>
+
+<footer>© 2025 R. Abida</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{particles:{number:{value:70},color:{value:"#00eaff"},size:{value:3},move:{speed:1}}});
+</script>
+
+<script>
+const text=["AI & Data Science Student","Machine Learning Enthusiast","NLP Developer"];
+let i=0,j=0;
+function type(){
+  if(j<text[i].length){
+    typing.innerHTML+=text[i][j++];
+    setTimeout(type,80);
+  }else setTimeout(erase,1500);
+}
+function erase(){
+  if(j>0){
+    typing.innerHTML=text[i].substring(0,--j);
+    setTimeout(erase,50);
+  }else{
+    i=(i+1)%text.length;
+    setTimeout(type,300);
+  }
+}
+type();
+</script>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
