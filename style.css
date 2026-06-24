@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #102a43, #06131f);
+  color: #eaeaea;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+}
+
+.hero-left span {
+  color: #00eaff;
+}
+
+.hero-left h3 {
+  margin: 10px 0;
+  color: #7f5af0;
+}
+
+.hero-left p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #7f5af0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #7f5af0;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 40px #7f5af0;
+}
+
+/* RIGHT AI CIRCLE */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00eaff, #0f2027);
+  box-shadow: 0 0 60px #00eaff;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00eaff;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+/* SKILLS GRID */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020c14;
+  color: #aaa;
+}
