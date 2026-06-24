@@ -6,7 +6,7 @@ A modern, responsive **AI & Data Science portfolio website** showcasing my skill
 
 ## 🚀 Live Preview
 
-> *(Optional)* Add your deployed link here (GitHub Pages / Netlify / Vercel)
+> abida-portfolio-website.vercel.app
 
 ---
 
