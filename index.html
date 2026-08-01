@@ -141,12 +141,19 @@ body{
 }
 
 /* PROJECTS */
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+..projects-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:40px;
+    align-items:stretch;
 }
 
+@media(max-width:768px){
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+}
 .project-card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
@@ -398,10 +405,7 @@ footer{
             <br><br>
             <strong>Technologies:</strong> Python, Speech Recognition, HTML, CSS, JavaScript
             <br><br>
-            <strong>Features:</strong>
-            <br>✔ Voice Search
-            <br>✔ Product Retrieval
-            <br>✔ Responsive Web Interface
+            <strong>Features:</strong> Voice Search,Product Retrieval,Responsive Web Interface.
         </p>
     </div>
 </div>
@@ -417,9 +421,7 @@ footer{
             <strong>Technologies:</strong> Python, Streamlit, Pandas
             <br><br>
             <strong>Features:</strong>
-            <br>✔ Screen-Time Analytics
-            <br>✔ Usage Reports
-            <br>✔ Addiction Scoring
+            <br>✔ Screen-Time Analytics,Usage Reports, Addiction Scoring
         </p>
     </div>
 </div>
